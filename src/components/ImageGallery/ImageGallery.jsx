@@ -1,14 +1,16 @@
 import css from './ImageGallery.module.css';
 
-export default function ImageGallery() {
+export default function ImageGallery({items}) {
     return (
     <ul>
-	{/* Набір елементів списку із зображеннями */}
-	<li>
+	{pictures.map(({objectID, picture, text}) => (
+	<li key={objectID}>
 		<div>
-		  <img src="" alt="" />
+		  <img src={picture} alt={text} />
 		</div>
-	</li>
+	</li>	
+	))}
 </ul>
 );
 }
+
