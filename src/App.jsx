@@ -7,7 +7,7 @@ import ImageGallery from "./components/ImageGallery/ImageGallery";
 import Loader from "./components/Loader/Loader";
 import ErrorMessage from "./components/ErrorMessage/ErrorMessage";
 import ImageModal from "./components/ImageModal/ImageModal";
-// import { fetchArticlesWithTopic } from "./articles-api";
+import { fetchPicturesWithImage } from "./axios-api";
 
 function App() {
   const [pictures, setPictures] = useState([]);

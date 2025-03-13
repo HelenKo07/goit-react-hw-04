@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #4d4e4a;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,14 +13,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+
 
 ul {
   list-style: none;
@@ -28,6 +21,7 @@ ul {
 
 body {
   margin: 0;
+  padding-top: 60px;
   display: flex;
   place-items: center;
   min-width: 320px;
