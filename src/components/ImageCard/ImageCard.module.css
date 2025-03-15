@@ -1,9 +1,9 @@
 .containerImg {
-    position: relative;
+  position: relative;
 }
 
 .imageitem {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: auto;
+  display: block;
 }

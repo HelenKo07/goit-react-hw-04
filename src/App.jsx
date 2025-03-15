@@ -22,10 +22,11 @@ function App() {
   const [modalIsOpen, setIsOpen] = useState(false);
 
   function openModal(photo) {
-    if (!modalIsOpen) {
-      setModalImage(photo);
+    if (modalIsOpen) return;
+    setModalImage(photo);
+    setTimeout(() => {
       setIsOpen(true);
-    }
+    }, 0);
   }
 
   function closedModal() {
@@ -53,9 +54,7 @@ function App() {
         setError(false);
         setIsLoading(true);
         const data = await fetchPicturesWithImage(loadMore, page);
-        setPictures((prevImage) => {
-          return [...prevImage, ...data];
-        });
+        setPictures((prevImage) => [...prevImage, ...data]);
       } catch (error) {
         setError(true);
       } finally {

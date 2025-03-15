@@ -1,31 +1,55 @@
 .modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
   top: 50%;
   left: 50%;
-  right: auto;
-  bottom: auto;
-  margin-right: -50%;
   transform: translate(-50%, -50%);
+  width: 60vw;
+  max-width: 19em;
+  background: rgb(196, 196, 196);
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.modalImage {
-  max-width: 90%;
-  max-height: 80vh;
-}
-
-.text {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 24px;
+.overlay {
+  z-index: 1040;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  background-color: rgba(41, 41, 41, 0.908);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btnModal {
-  width: 1em;
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 5px;
+  right: 3px;
   background: none;
+  border: none;
   cursor: pointer;
+  color: white;
+  transition: color 0.3s;
+}
+
+.btnModal:hover {
+  color: #222e06;
+}
+
+.text {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 300;
+  color: black;
+  text-align: center;
+  margin-top: 10px;
 }

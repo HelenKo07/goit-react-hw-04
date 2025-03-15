@@ -9,10 +9,11 @@ export default function ImageModal({ isOpenModal, photo, isCloseModal }) {
     <>
       <Modal
         className={css.modal}
+        overlayClassName={css.overlay}
         isOpen={isOpenModal}
         onRequestClose={isCloseModal}
         contentLabel="Image Preview"
-        ariaHideApp={false}
+        ariaHideApp={true}
       >
         <img
           className={css.modalImage}
@@ -20,9 +21,8 @@ export default function ImageModal({ isOpenModal, photo, isCloseModal }) {
           alt={photo?.alt_description || "Image"}
           style={{ maxWidth: "100%", height: "auto" }}
         />
-        <p className={css.text}>Description: {photo?.alt_description}</p>
+        <p className={css.text}>{photo?.alt_description}</p>
         <p className={css.text}>Likes: {photo?.likes}</p>
-        <p className={css.text}>Download: {photo?.links?.download}</p>
         <p className={css.text}>Instagram: {photo?.user?.instagram_username}</p>
         <button className={css.btnModal} onClick={isCloseModal}>
           <AiOutlineClose />
