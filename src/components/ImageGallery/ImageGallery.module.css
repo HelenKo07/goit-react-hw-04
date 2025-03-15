@@ -1,0 +1,11 @@
+.listImage {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style-type: none;
+  }
+  
+  .itemImg {
+    flex-basis: calc(33.333% - 10px);
+  }
+  

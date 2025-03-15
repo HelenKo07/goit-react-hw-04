@@ -3,14 +3,15 @@ import { Field, Form, Formik } from "formik";
 import { toast } from "react-hot-toast";
 
 export default function SearchBar({ onSearch }) {
-  const handleSubmit = (values, action) => {
+  const handleSubmit = (values, actions) => {
     const searchImage = values.image.trim();
     if (!searchImage) {
       toast.error("Please enter a search term.");
+      actions.setSubmitting(false);
       return;
     }
     onSearch(searchImage);
-    action.resetForm();
+    actions.resetForm();
   };
 
   return (
