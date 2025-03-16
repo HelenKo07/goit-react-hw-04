@@ -8,9 +8,6 @@ import ErrorMessage from "./components/ErrorMessage/ErrorMessage";
 import ImageModal from "./components/ImageModal/ImageModal";
 import { fetchPicturesWithImage } from "./axios-api";
 import { Toaster } from "react-hot-toast";
-import Modal from "react-modal";
-
-Modal.setAppElement("#root");
 
 function App() {
   const [pictures, setPictures] = useState([]);
@@ -19,18 +16,12 @@ function App() {
   const [loadMore, setLoadMore] = useState("");
   const [page, setPage] = useState(1);
   const [modalImage, setModalImage] = useState(null);
-  const [modalIsOpen, setIsOpen] = useState(false);
 
   function openModal(photo) {
-    if (modalIsOpen) return;
     setModalImage(photo);
-    setTimeout(() => {
-      setIsOpen(true);
-    }, 0);
   }
 
   function closedModal() {
-    setIsOpen(false);
     setModalImage(null);
   }
 
@@ -76,7 +67,6 @@ function App() {
         <LoadMoreBtn onLoadMore={handleLoadMore} />
       )}
       <ImageModal
-        isOpenModal={modalIsOpen}
         photo={modalImage}
         isCloseModal={closedModal}
       />
